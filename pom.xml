@@ -14,17 +14,6 @@
   <packaging>war</packaging>
   <name>spring-boot-micro-service-archetype</name>
   <description>Demo project for Spring Boot</description>
-  <distributionManagement>
-    <repository>
-      <uniqueVersion>false</uniqueVersion>
-      <id>nexus-releases</id>
-      <url>  -Releases</url>
-    </repository>
-    <snapshotRepository>
-      <id>nexus-snapshots</id>
-      <url>  -Snapshots</url>
-    </snapshotRepository>
-  </distributionManagement>
   <properties>
     <java.version>1.8</java.version>
   </properties>
