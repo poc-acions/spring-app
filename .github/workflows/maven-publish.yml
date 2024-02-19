@@ -21,6 +21,8 @@ jobs:
         distribution: 'temurin'
         server-id: github # Value of the distributionManagement/repository/id field of the pom.xml
         settings-path: ${{ github.workspace }} # location for the settings.xml file
+        server-username: MAVEN_USERNAME # env variable for username in deploy
+        server-password: GITHUB_TOKEN # env variable for token in deploy
 
     - name: Build with Maven
       run: mvn -B package --file pom.xml
@@ -28,4 +30,5 @@ jobs:
     - name: Publish to GitHub Packages Apache Maven
       run: mvn deploy 
       env:
+        MAVEN_USERNAME: atteif
         GITHUB_TOKEN: ${{ github.token }}
